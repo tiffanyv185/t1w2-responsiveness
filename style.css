@@ -3,26 +3,66 @@ body {
     font-family: Arial, Helvetica
 }
 
+/* h1 {
+  background-color: white;
+} */
 
-
-/* Create three equal columns that float next to each other */
+/* Create three equal columns that float next to each other
 .column {
     float: left;
     width: 33.33%;
+  } */
+/* for mobile */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px
   }
   
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .logo {
+    width:100px;
+    height:100px;
+    background-color: white;
+    border-radius: 15%;
+    border: 15px solid yellow
+  }
+  
+  /* for desktop */
   @media screen and (min-width: 600px) {
     body {
         background-color: rgb(166, 190, 236);
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    main {
+      flex-direction: row;
+    }
+      .main_paragraph {
+        padding-left: 1rem;
+      }
+    header {
+      flex-direction: row;
+      justify-content:center;
+      gap: 10px;
+    }
     }
 }
   
   /* Clear floats after the columns */
-  .row:after {
+  /* .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
   @media screen and (max-width: 600px) {
@@ -30,3 +70,6 @@ body {
       width: 100%;
     }
   }
+
+  
+  
